@@ -15,3 +15,20 @@ php artisan key:generate
 php artisan cache:clear && php artisan config:clear 
 php artisan serve 
 ```
+
+Create dummy data
+```
+php artisan tinker
+```
+
+Run the following commands (order matters)
+```
+User::factory()->times(10)->create();
+Post::factory()->times(20)->create();
+Tag::factory()->times(4)->create();
+```
+
+Finally, let's add data inside our pivot table through our database seeder.
+```
+php artisan db:seed
+```
