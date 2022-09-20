@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PostsController::class, 'index']);
+Route::get('/', [PostsController::class, 'index'])->name('index');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
